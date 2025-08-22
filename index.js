@@ -18,7 +18,7 @@ myServer.listen(8001,()=>{
 console.log("server is listening on port 8001");
 }); */
 
-const http = require("http");
+/* const http = require("http");
 const fs = require("fs");
 
 // Create server
@@ -55,3 +55,19 @@ const myServer = http.createServer((req, res) => {
 myServer.listen(8001, () => {
   console.log("✅ Server is listening on port 8001");
 });
+ */
+
+const express = require("express");
+
+const app =express();
+
+app.get("/", (req,res)=>{
+  res.send("Hello from Express!");
+});
+
+app.listen(5726,()=>{
+console.log("✅ Server is listening on port 5726");
+});
+
+
+ 
