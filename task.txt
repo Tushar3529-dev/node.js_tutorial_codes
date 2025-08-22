@@ -1,0 +1,23 @@
+Rest Api -JSON
+
+GET       /user  - list all documnet in html (HTML Documnet Render) --- Done 
+
+GET       /api/user   - list all users in json --- Done 
+
+
+
+GET       /user/1 - get the user with id 1  
+GET       /user/2  - get the user with id 2 
+
+
+Dynamic Path Parameters
+GET         /api/user/:id
+:id -> Variable| Dynamic
+
+
+
+POST      /user - create new user 
+
+PATCH     /user/1 - Edit the user with id 1
+
+DELETE    /user/1 - delete the user with id 1 
