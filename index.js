@@ -47,9 +47,52 @@ app.route("/api/user/:id").get( (req, res) => {
    res.json(founduser);
 
 }).patch( (req, res) => {
-//ToDo : Edit the user information
+//ToDo : Edit the user information]
+
+const id = parseInt(req.params.id);
+
+const body =req.body;
+
+const userIndex = user.findIndex(u => u.id === id);
+if (userIndex === -1) {
+    return res.status(404).json({ status: "error", message: "User not found" });
+}
+
+user[userIndex] = { ...user[userIndex], ...body };
+fs.writeFile("./MOCK_DATA.json", JSON.stringify(user), (err) => {
+    if (err) {
+        console.error("Error writing file:", err);
+        return res.status(500).json({ status: "error" });
+    }
+
+    return res.json({ status: "success" });
+});
+
 }).delete( (req, res) => {
     //ToDo: Delete the user
+
+    const id = parseInt(req.params.id);
+
+        // Find the index of the user
+    const userIndex = user.findIndex(u => u.id === id);
+
+        if (userIndex === -1) {
+        return res.status(404).json({ status: "error", message: "User not found" });
+    }
+
+    // Remove the user from the array
+    user.splice(userIndex, 1);
+
+    fs.writeFile("./MOCK_DATA.json", JSON.stringify(user), (err) => {
+        if (err) {
+            console.error("Error writing file:", err);
+            return res.status(500).json({ status: "error" });
+        }
+
+        return res.json({ status: "success" });
+    });
+
+
 });
 
 app.post("/api/user", (req, res) => {
