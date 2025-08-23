@@ -1,10 +1,15 @@
  const express = require("express");
 
+ const fs =require("fs");
+
  const user =require("./MOCK_DATA.json");
 
  const app = express();
 
  const PORT = 5726;
+
+ // MIdleWare
+ app.use(express.urlencoded({extended: false}));
 
  app.listen(PORT, () => {
    console.log(`✅ Server is listening on port ${PORT}`);
@@ -50,5 +55,16 @@ app.route("/api/user/:id").get( (req, res) => {
 app.post("/api/user", (req, res) => {
     //ToDO :  Create a user 
     // I have use postman for this 
-    return res.json({status: "pending"});
+
+    const body=req.body;
+    console.log("Creating user:", body);
+       user.push({...body, id: user.length + 1});
+fs.writeFile("./MOCK_DATA.json", JSON.stringify(user), (err) => {
+    if (err) {
+        console.error("Error writing file:", err);
+        return res.status(500).json({ status: "error" });
+    }
+
+    return res.json({ status: "success" });
+});
 });
