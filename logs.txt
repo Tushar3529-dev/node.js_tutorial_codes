@@ -1,0 +1,16 @@
+ 
+ Request: GET /api/user/5
+ 
+ Request: GET /api/user/5
+ 
+ Request: GET /api/user/3
+ 
+ Request: GET /api/user/5
+ 
+ Request: GET /api/user/10
+ 
+ Request: GET /api/user
+ 
+ Request: GET /api/user/3
+ 
+ Request: GET /api/user

@@ -11,6 +11,22 @@
  // MIdleWare
  app.use(express.urlencoded({extended: false}));
 
+
+app.use((req,res,next) => {
+   console.log("hello from middleware 1");
+   next();
+});
+
+app.use((req,res,next) => {
+   fs.appendFile("./logs.txt", ` \n Request: ${req.method} ${req.url}\n`, (err) => {
+       if (err) {
+           console.error("Error writing to log file:", err);
+       }
+   });
+   next();
+});
+
+
  app.listen(PORT, () => {
    console.log(`✅ Server is listening on port ${PORT}`);
  });
@@ -18,7 +34,13 @@
 
 
  app.get("/api/user", (req,res)=> {
-   res.json(user);
+
+    res.setHeader('X-MyName', 'Tushar'); // Custome headers
+
+    // ALways add X to Custome headers
+    res.setHeader('X-Custom-Header', 'CustomValue');
+
+  return  res.json(user);
  });
 
   app.get("/user", (req,res)=> {
