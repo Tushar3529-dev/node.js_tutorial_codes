@@ -56,3 +56,73 @@
  Request: GET /api/user/3
  
  Request: GET /api/user/3456
+ 
+ Request: GET /api/user/3
+ 
+ Request: GET /api/user/3
+ 
+ Request: POST /api/user
+ 
+ Request: GET /api/user/3
+ 
+ Request: GET /api/user/3
+ 
+ Request: POST /api/user
+ 
+ Request: POST /api/user
+ 
+ Request: POST /api/user
+ 
+ Request: POST /api/user
+ 
+ Request: POST /api/user
+ 
+ Request: GET /user
+ 
+ Request: GET /api/user
+ 
+ Request: GET /api/user
+ 
+ Request: GET /api/user
+ 
+ Request: GET /api/user
+ 
+ Request: GET /api/user
+ 
+ Request: GET /api/user/68aabb6e7549e3b87cbb784c
+ 
+ Request: PATCH /api/user/68aabb6e7549e3b87cbb784c
+ 
+ Request: DELETE /api/user/68aabb6e7549e3b87cbb784c
+ 
+ Request: PATCH /api/user/68aabb6e7549e3b87cbb784c
+ 
+ Request: PATCH /api/user/68aabb6e7549e3b87cbb784c
+ 
+ Request: PATCH /api/user/68aabb6e7549e3b87cbb784c
+ 
+ Request: PATCH /api/user/68aabb6e7549e3b87cbb784c
+ 
+ Request: PATCH /api/user/68aabb6e7549e3b87cbb784c
+ 
+ Request: PATCH /api/user/68aabb6e7549e3b87cbb784c
+ 
+ Request: PATCH /api/user/68aabb6e7549e3b87cbb784c
+ 
+ Request: PATCH /api/user/68aabb6e7549e3b87cbb784c
+ 
+ Request: PATCH /api/user/68aabb6e7549e3b87cbb784c
+ 
+ Request: PATCH /api/user/68aabb6e7549e3b87cbb784c
+ 
+ Request: GET /api/user/
+ 
+ Request: GET /api/user/68aac0fb7e17704a357cd6e0
+ 
+ Request: PATCH /api/user/68aac0fb7e17704a357cd6e0
+ 
+ Request: GET /api/user/68aac0fb7e17704a357cd6e0
+ 
+ Request: DELETE /api/user/68aac0fb7e17704a357cd6e0
+ 
+ Request: GET /api/user/
