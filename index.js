@@ -64,6 +64,9 @@ app.use((req,res,next) => {
 
 app.route("/api/user/:id").get( (req, res) => {
  const id = parseInt(req.params.id);
+ if(!user){
+    return res.status(404).json({ status: "error", message: "User not found" });
+ }
  const founduser = user.find(u => u.id === id);
 
    res.json(founduser);
@@ -122,6 +125,13 @@ app.post("/api/user", (req, res) => {
     // I have use postman for this 
 
     const body=req.body;
+
+if(
+    !body||
+    !body.first_name || !body.last_name || !body.email || !body.gender || !body.job_title) {
+    return res.status(400).json({ status: "error", message: "Missing required fields" });
+}
+
     console.log("Creating user:", body);
        user.push({...body, id: user.length + 1});
 fs.writeFile("./MOCK_DATA.json", JSON.stringify(user), (err) => {
@@ -130,6 +140,6 @@ fs.writeFile("./MOCK_DATA.json", JSON.stringify(user), (err) => {
         return res.status(500).json({ status: "error" });
     }
 
-    return res.json({ status: "success" });
+    return res.status(201).json({ status: "success" });
 });
 });

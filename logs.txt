@@ -14,3 +14,45 @@
  Request: GET /api/user/3
  
  Request: GET /api/user
+ 
+ Request: GET /api/user/3
+ 
+ Request: POST /api/user
+ 
+ Request: GET /api/user/3
+ 
+ Request: POST /api/user
+ 
+ Request: GET /api/user/3
+ 
+ Request: GET /api/user/3
+ 
+ Request: GET /api/user/3
+ 
+ Request: POST /api/user
+ 
+ Request: POST /api/user
+ 
+ Request: POST /api/user
+ 
+ Request: GET /api/user/3
+ 
+ Request: GET /api/user/3
+ 
+ Request: GET /api/user/3
+ 
+ Request: GET /api/user/3002
+ 
+ Request: GET /api/user/1
+ 
+ Request: GET /api/user/5002
+ 
+ Request: GET /api/user/3
+ 
+ Request: GET /api/user/5002
+ 
+ Request: GET /api/user/5002555
+ 
+ Request: GET /api/user/3
+ 
+ Request: GET /api/user/3456
