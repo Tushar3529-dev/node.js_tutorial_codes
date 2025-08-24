@@ -126,3 +126,5 @@
  Request: DELETE /api/user/68aac0fb7e17704a357cd6e0
  
  Request: GET /api/user/
+ 
+ Request: GET /user/
